@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Mali', cursive;
+  text-align: center;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: #ff4d6d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  flex-direction: column; /* ให้เนื้อหาจัดวางในแนวตั้ง */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 26px;
+  color: #ff2e63;
+  animation: fadeIn 2s ease-in-out;
+}
+
+input {
+  padding: 12px;
+  width: 80%;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 2px solid #ff4d6d;
+  text-align: center;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  animation: inputGlow 1s infinite alternate;
+}
+
+input:focus {
+  border-color: #ff2e63;
+  box-shadow: 0px 0px 10px rgba(255, 77, 109, 0.5);
+  transform: scale(1.05);
+}
+
+@keyframes inputGlow {
+  0% {
+    box-shadow: 0px 0px 5px rgba(255, 77, 109, 0.3);
+  }
+  100% {
+    box-shadow: 0px 0px 15px rgba(255, 77, 109, 0.7);
+  }
+}
+
+button {
+  padding: 12px 25px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(255, 77, 109, 0.4);
+}
+
+button:hover {
+  background: #e63950;
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+#noButton {
+  position: absolute;
+}
+
+/* เอฟเฟกต์หัวใจลอยขึ้นจากด้านล่าง */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    opacity: 1;
+    animation: floatUp 3s ease-out forwards; /* ลอยขึ้น */
+    user-select: none;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-800px); /* เพิ่มความสูงในการลอย */
+      opacity: 0;
+    }
+  }
+  
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

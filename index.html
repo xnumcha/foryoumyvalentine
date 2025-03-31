@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for you na - Ice</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="background-music" loop autoplay>
+        <source src="music/foryou.mp3" type="audio/mp3">
+        การเล่นเพลงไม่รองรับในเบราว์เซอร์ของคุณ
+      </audio>
+
+  <div class="container" id="first-page">
+    <h1>สำหรับคนพิเศษ</h1>
+    <label for="name">กรุณากรอกชื่อของคุณ:</label>
+    <input type="text" id="name" placeholder="ชื่อของคุณ">
+    <button onclick="goToNextPage()">ตกลง</button>
+  </div>
+
+  <div id="questionnaire" class="container" style="display:none;">
+    <h2>คำถาม</h2>
+    <div id="question-container"></div>
+    <p id="countdown" style="display:none;"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
